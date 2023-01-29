@@ -1,7 +1,6 @@
 name: Tests
 on:
   push:
-    branches: [main]
   pull_request:
     branches: [main]
 
@@ -11,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
+      fail-fast: false
       matrix:
         ruby-version:
           - '2.6'
